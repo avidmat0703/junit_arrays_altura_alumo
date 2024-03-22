@@ -33,10 +33,10 @@ public class AlturaAlumnoTest {
         for (int i = 0; i< array.length;i++)
             assertEquals(array[i], arrayActual[i]);
 
-//        String[] arrayExpected = Arrays.copyOf(array, array.length+1);
-//        arrayExpected[arrayExpected.length-1]=nombre;
-//
-//        assertArrayEquals(arrayExpected, arrayActual);
+        String[] arrayExpected = Arrays.copyOf(array, array.length+1);
+        arrayExpected[arrayExpected.length-1]=nombre;
+
+        assertArrayEquals(arrayExpected, arrayActual);
 
     }
 
@@ -51,8 +51,8 @@ public class AlturaAlumnoTest {
         String[] arrayActual = AlturaAlumno
                 .añadeNombre(array, nombre);
 
-//        assertTrue(arrayActual[arrayActual.length-1]
-//                .equals(nombre) );
+        assertTrue(arrayActual[arrayActual.length-1]
+                .equals(nombre) );
         assertEquals(longInicial+1, arrayActual.length);
         assertEquals(nombre, arrayActual[longInicial+1]);
 
@@ -103,12 +103,12 @@ public class AlturaAlumnoTest {
         //Then (Entonces)
 
         //altura esta en la posicion
-        //assertTrue( altura == array[posicion]);
+        assertTrue( altura == array[posicion]);
 
         //Todos los demas elementos del array no cambian
-//        for (int i = 0; i < array.length; i++) {
-//                assertEquals(array[i], array2[i]);
-//        }
+        for (int i = 0; i < array.length; i++) {
+                assertEquals(array[i], array2[i]);
+        }
         assertArrayEquals(array2, array);
 
     }
